@@ -1,8 +1,14 @@
-# 📖 LiWeb – Aplicación Móvil de Venta de Libros para Android
+# 📖 LIWEB – Aplicación Móvil de Venta de Libros para Android
 
-**LiWeb** es una aplicación móvil nativa para Android, desarrollada en **Kotlin**, diseñada para ofrecer una experiencia de compra de libros moderna y segura. Integra tecnologías de vanguardia como **Firebase** para el backend en tiempo real y **Stripe** para un procesamiento de pagos confiable.
+**LIWEB** es una aplicación móvil nativa para Android, desarrollada en **Kotlin**, diseñada para ofrecer una experiencia de compra de libros moderna y segura. Integra tecnologías de vanguardia como **Firebase** para el backend en tiempo real y **Stripe** para un procesamiento de pagos confiable.
 
-[**Ver Prototipo**](https://bit.ly/Liweb-App)
+---
+
+## 🎨 Vista Previa y Descarga
+
+[🎨 **Ver Prototipo (Figma)**](https://bit.ly/Liweb-App)
+
+[![Download APK](https://img.shields.io/badge/⬇️_Descargar-LiWeb%20v1.0-brightgreen?style=for-the-badge)](https://drive.google.com/uc?export=download&id=18_Oj23RSBEXvvO7jpKHIBZOyzJBSmXwO)
 
 ---
 
@@ -27,7 +33,7 @@ El proyecto está construido con un stack moderno y escalable para el ecosistema
 ### 💻 Desarrollo Nativo
 
 * **Lenguaje:** **Kotlin**
-* **Arquitectura:** **MVP** (Model–View–Presenter)
+* **Arquitectura:** **MVP** 
 * **Diseño de UI:** XML, **ViewBinding**, y **Material Design**
 
 ### ☁️ Backend y Servicios
@@ -47,16 +53,6 @@ El proyecto está construido con un stack moderno y escalable para el ecosistema
 
 ---
 
-## 🏛 Arquitectura del Sistema: MVP
-
-El proyecto implementa el patrón **Model–View–Presenter (MVP)** para garantizar la separación de preocupaciones y promover un código más mantenible:
-
-* **Model:** Capa de datos y lógica de negocio (interacción con Firebase, Stripe, etc.).
-* **View:** Componentes de la UI (Actividades y Fragmentos) que manejan la interacción del usuario.
-* **Presenter:** Actúa como intermediario, manejando la lógica de la UI y las llamadas al Model.
-
----
-
 ## 🚀 Instalación y Ejecución Local
 
 Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno de desarrollo.
@@ -69,11 +65,11 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno de desarr
 
 ### 2. Clonar y Abrir el Proyecto
 
-1.  Clona el repositorio:
-    ```bash
-    git clone [https://github.com/Yuls-Ch/Liweb-App.git](https://github.com/Yuls-Ch/Liweb-App.git)
-    cd LiWeb-App
-    ```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Yuls-Ch/Liweb-App.git
+   cd Liweb-App
+
 2.  Abre la carpeta `LiWeb-App` en **Android Studio**.
 3.  Espera la sincronización de Gradle.
 
