@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?android:attr/colorBackground"
+    tools:context=".presenter.topBooks.TopBooksActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_top_books"
+        android:layout_width="match_parent"
+        android:layout_height="107dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-20dp"
+            android:src="@drawable/icon_app_liweb"
+            tools:ignore="contentDescription" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/ic_Sun"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="-20dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/corners_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/sun_icon"
+            app:tint="?attr/colorOnPrimary" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:layout_marginEnd="1dp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:text="@string/button_exit_text"
+            android:textSize="28sp"
+            android:textColor="?attr/colorOnPrimary"
+            app:cornerRadius="8dp"
+            app:icon="@drawable/exit_icon"
+            app:iconGravity="textEnd"
+            app:iconSize="25dp"
+            app:iconTint="?attr/colorOnPrimary" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/top_books"
+        android:layout_width="223dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="-26dp"
+        android:background="@drawable/corners_text"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="8dp"
+        android:text="@string/top_books"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="20sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="4dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerListTopBooks"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        tools:listitem="@layout/item_top_book" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_curva_inferior"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="32dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/desing_lower"
+            tools:ignore="contentDescription" />
+
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="148dp"
+            android:layout_height="61dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:text="@string/back_button"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="15sp"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/arrow"
+            app:iconGravity="start"
+            app:iconSize="20dp"
+            app:iconTint="?attr/colorOnPrimary" />
+    </RelativeLayout>
+</LinearLayout>

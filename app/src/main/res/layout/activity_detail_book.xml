@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/android:colorBackground"
+    tools:context=".presenter.detail.DetailBookActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/icon_app_liweb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="contentDescription" />
+
+    <ImageButton
+        android:id="@+id/my_icon_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/corners_button"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/sun_icon"
+        android:contentDescription="@string/change_theme_description"
+        app:layout_constraintEnd_toStartOf="@+id/my_material_icon_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/my_material_icon_button"
+        style="@style/Widget.MyApp.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/button_exit_text"
+        android:textSize="28sp"
+        app:icon="@drawable/exit_icon"
+        app:iconGravity="textEnd"
+        app:iconSize="25dp"
+        app:iconTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bannerLibro"
+        android:layout_width="0dp"
+        android:layout_height="143dp"
+        android:layout_marginTop="12dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cadaver_hd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        tools:ignore="contentDescription" />
+
+    <TextView
+        android:id="@+id/tituloLibro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="#99000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:text="@string/banner_text"
+        android:textColor="@android:color/white"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/bannerLibro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bannerLibro"
+        app:layout_constraintVertical_bias="0.493" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contenedorDetalle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/colorSurface"
+        app:layout_constraintTop_toBottomOf="@id/bannerLibro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/txtDetalleProducto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/detalle_producto_title"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/txtNombreAutorTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/nombre_autor_title"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/txtDetalleProducto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/txtNombreAutorValor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/nombre_autor_value"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/txtNombreAutorTitulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/txtSinopsisTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/sinopsis_title"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/txtNombreAutorValor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/txtSinopsisTexto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/sinopsis_text"
+            android:textAlignment="center"
+            android:textSize="11sp"
+            android:textColor="?attr/colorOnSurface"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtSinopsisTitulo" />
+
+        <TextView
+            android:id="@+id/txtCategoriaTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/categoria_title"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/txtSinopsisTexto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/txtAnioPublicacionTitulo"
+            app:layout_constraintHorizontal_chainStyle="spread" />
+
+        <TextView
+            android:id="@+id/txtCategoriaValor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/categoria_value"
+            android:textAlignment="center"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/txtCategoriaTitulo"
+            app:layout_constraintStart_toStartOf="@id/txtCategoriaTitulo"
+            app:layout_constraintTop_toBottomOf="@id/txtCategoriaTitulo" />
+
+        <TextView
+            android:id="@+id/txtAnioPublicacionTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/anio_publicacion_title"
+            android:textColor="?attr/colorOnSurface"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/txtCategoriaTitulo"
+            app:layout_constraintTop_toBottomOf="@id/txtSinopsisTexto" />
+
+        <TextView
+            android:id="@+id/txtAnioPublicacionValor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/anio_publicacion_value"
+            android:textAlignment="center"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/txtAnioPublicacionTitulo"
+            app:layout_constraintStart_toStartOf="@id/txtAnioPublicacionTitulo"
+            app:layout_constraintTop_toBottomOf="@id/txtAnioPublicacionTitulo" />
+
+        <TextView
+            android:id="@+id/txtCantidadTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/cantidad_title"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/txtAnioPublicacionValor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/txtPrecioTitulo"
+            app:layout_constraintHorizontal_chainStyle="spread" />
+
+        <LinearLayout
+            android:id="@+id/quantityContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/txtCantidadTitulo"
+            app:layout_constraintStart_toStartOf="@id/txtCantidadTitulo"
+            app:layout_constraintTop_toBottomOf="@id/txtCantidadTitulo">
+
+            <Button
+                android:id="@+id/btnDecrease"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:contentDescription="@string/decrease_quantity"
+                android:backgroundTint="?attr/colorSecondary"/>
+
+            <TextView
+                android:id="@+id/txtCantidad"
+                android:layout_width="35dp"
+                android:layout_height="34dp"
+                android:layout_marginHorizontal="4dp"
+                android:background="@drawable/btn_circle_blue"
+                android:backgroundTint="?attr/colorPrimary"
+                android:gravity="center"
+                android:text="@string/cantidad"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnIncrease"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:contentDescription="@string/increase_quantity"
+                android:backgroundTint="?attr/colorSecondary"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/txtPrecioTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/precio_title"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/txtAnioPublicacionValor"
+            app:layout_constraintStart_toEndOf="@id/txtCantidadTitulo"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/txtPrecioValor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/precio_value"
+            android:textAlignment="center"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/txtPrecioTitulo"
+            app:layout_constraintStart_toStartOf="@id/txtPrecioTitulo"
+            app:layout_constraintTop_toBottomOf="@id/txtPrecioTitulo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomOptions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contenedorDetalle"
+        app:layout_constraintVertical_bias="0.0">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBack"
+            style="@style/Widget.MyApp.Button"
+            android:layout_width="130dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="24dp"
+            android:text="@string/back_button"
+            android:textSize="11sp"
+            app:icon="@drawable/arrow"
+            app:iconGravity="textStart"
+            app:iconSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFavorite"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:layout_marginHorizontal="16dp"
+            android:backgroundTint="?attr/colorSurfaceVariant"
+            android:contentDescription="@string/toggle_favorite"
+            app:icon="@drawable/star"
+            app:iconTint="?attr/colorOnSurfaceVariant"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnCart"
+            app:layout_constraintStart_toEndOf="@id/btnBack"
+            app:layout_constraintTop_toTopOf="parent" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCart"
+            style="@style/Widget.MyApp.Button"
+            android:layout_width="130dp"
+            android:layout_height="54dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/cart"
+            android:textSize="11sp"
+            app:icon="@drawable/ic_shopping_cart"
+            app:iconGravity="textStart"
+            app:iconSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/desing_lower"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="contentDescription"/>
+
+    <ImageButton
+        android:id="@+id/image_shop_book"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_card_icon"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/icon_cart"
+        android:contentDescription="@string/go_to_shopping_cart"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

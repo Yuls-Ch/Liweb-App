@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/android:colorBackground"
+    tools:context=".presenter.favorite.FavoriteBookActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:id="@+id/imageViewLiwebLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_app_liweb"
+            android:layout_marginTop="-20dp"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/my_icon_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="-20dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/corners_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/sun_icon"
+            android:contentDescription="@string/change_theme_description"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/my_material_icon_button"
+            style="@style/Widget.MyApp.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:layout_marginEnd="1dp"
+            android:text="@string/button_exit_text"
+            android:textSize="28sp"
+            app:icon="@drawable/exit_icon"
+            app:iconGravity="textEnd"
+            app:iconSize="25dp"
+            app:iconTint="@null" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="-15dp"
+        android:background="@drawable/rounded_blue_background"
+        android:gravity="center"
+        android:text="LIBROS FAVORITOS"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewLibros"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="46dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        tools:listitem="@layout/item_favorite" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="-20dp">
+        <ImageView
+            android:id="@+id/image_curva_inferior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/desing_lower"
+            android:layout_alignParentBottom="true"
+            android:contentDescription="Fondo decorativo inferior" />
+
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="148dp"
+            android:layout_height="61dp"
+            android:layout_alignTop="@id/image_curva_inferior"
+            android:layout_marginTop="-50dp"
+            android:layout_marginStart="15dp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:text="@string/back_button"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="15sp"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/arrow"
+            app:iconGravity="start"
+            app:iconSize="20dp"
+            app:iconTint="?attr/colorOnPrimary" />
+
+    </RelativeLayout>
+</LinearLayout>

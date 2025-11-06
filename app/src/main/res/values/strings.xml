@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="login_title">LOGUEO</string>
+    <string name="register_title">REGISTRO</string>
+    <string name="register_name">"NOMBRE"</string>
+    <string name="login_email_hint">"CORREO"</string>
+    <string name="login_password_hint">"CONTRASEÑA"</string>
+    <string name="login_button">INGRESAR</string>
+    <string name="register_button">REGISTRAR</string>
+    <string name="back_button">VOLVER</string>
+
+    // Dialog exit
+    <string name="message_user">Usuario</string>
+    <string name="message_exit">¿SEGURO QUE QUIERES SALIR?</string>
+    <string name="message_close">No, cerrar</string>
+    <string name="message_check">Sí, salir</string>
+
+    // Dialog Product not selected
+    <string name="icon_description">Carrito vacío</string>
+    <string name="message_product">¡AÚN NO HAS SELECCIONADO UN PRODUCTO!</string>
+
+    // Profile
+    <string name="change_topic">Cambiar tema</string>
+    <string name="profile_title">PERFIL</string>
+    <string name="description_fab_edit">Editar perfil</string>
+    <string name="user_subtitle">DATOS DEL USUARIO</string>
+    <string name="user_name">NOMBRE COMPLETO</string>
+    <string name="password">Alternar la visibilidad de la contraseña</string>
+
+    // Modal Filter
+    <string name="filter_title">FILTROS</string>
+    <string name="filter_price">PRECIO:</string>
+    <string name="description_price">INGRESAR PRECIO</string>
+    <string name="filter_category">CATEGORIA:</string>
+    <string name="description_category">SELECCIONAR</string>
+    <string name="filter_apply">APLICAR</string>
+    <string name="filter_clear">QUITAR FILTROS</string>
+
+    // Register options
+    <string name="button_text_register1">LOGUEO</string>
+    <string name="button_text_register2">REGISTRO</string>
+
+    // Home
+    <string name="bienvenida">"BIENVENIDO"</string>
+    <string name="button_exit_text">Salir</string>
+    <string name="search_edit_text">BUSCAR</string>
+    <string name="message_no_results">No se encuentran resultados</string>
+
+    // Book
+    <string name="book_title">LIBROS</string>
+    <string name="book_filter">BUSCAR</string>
+    <string name="book_price">S/ %1$.2f</string>
+    <string name="title">CADÁVER EXQUISITO</string>
+
+    // Top Books
+    <string name="top_books">TOP LIBROS</string>
+    <string name="position_format">%1$d</string>
+
+    // Detail
+    <string name="detalle_producto_title">DETALLE DEL PRODUCTO</string>
+    <string name="nombre_autor_title">NOMBRE DEL AUTOR</string>
+    <string name="nombre_autor_value">NOMBRE DEL AUTOR CD</string>
+    <string name="sinopsis_title">SINOPSIS</string>
+    <string name="sinopsis_text">Lorem ipsum dolor sit amet consectetur adipiscing elit blandit cras rutrum facilisis pellentesque, morbi scelerisque ut montes eros et facilisi quisque luctus purus. Ad ut massa plac</string>
+    <string name="categoria_title">CATEGORÍA</string>
+    <string name="categoria_value">DISTOPÍA</string>
+    <string name="anio_publicacion_title">AÑO PUBLICACIÓN</string>
+    <string name="anio_publicacion_value">2020</string>
+    <string name="cantidad_title">CANTIDAD</string>
+    <string name="precio_title">PRECIO UNI.</string>
+    <string name="precio_value">S/. 00.00</string>
+    <string name="banner_text">CADÁVER EXQUISITO</string>
+    <string name="cantidad">1</string>
+    <string name="cart">AÑADIR</string>
+    <string name="message_toast_add_cart">Se agregó al carrito</string>
+    <string name="change_theme_description">Cambiar tema</string>
+    <string name="decrease_quantity">Disminuir cantidad</string>
+    <string name="increase_quantity">Aumentar cantidad</string>
+    <string name="toggle_favorite">Marcar como favorito</string>
+    <string name="go_to_shopping_cart">Ir al carrito de compras</string>
+
+    // Shoping
+    <string name="book_price_format">S/ %1$.2f</string>
+    <string name="book_quantity_format">Cantidad: %1$d</string>
+    <string name="stock_insuficent">Solo hay %1$d unidades disponibles</string>
+
+    // Catalog Books
+    <string name="cart_books">Carrito de compras</string>
+    <string name="filter_books">Filtros para buscar libros</string>
+
+    //firebase-auth
+    <string name="default_web_client_id">107744191965-oh1gjjl2ean5s5d8eql2hvvt1a7qnkrt.apps.googleusercontent.com</string>
+</resources>
+

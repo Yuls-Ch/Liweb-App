@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/corners_rounded_top"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:layout_width="320dp"
+                    android:layout_height="47dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/corners_text"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:text="@string/filter_title"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/tvCategoryLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/filter_category"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@id/tvCategoryLabel"
+                    android:autofillHints="none"
+                    android:background="@drawable/corners_edit_text"
+                    android:focusable="false"
+                    android:gravity="center_vertical|start"
+                    android:hint="@string/description_category"
+                    android:includeFontPadding="false"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:padding="12dp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textColorHint="#CCCCCC"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgDropdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@id/etCategory"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:contentDescription="@string/filter_category"
+                    android:focusable="true"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_down_sign" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llCategoryList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:background="@drawable/corners_rounded_bottom"
+                android:padding="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/filter_price"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="55dp"
+                    android:layout_height="0dp" />
+
+                <EditText
+                    android:id="@+id/etPrecio"
+                    android:layout_width="0dp"
+                    android:layout_height="51dp"
+                    android:layout_weight="1"
+                    android:autofillHints="none"
+                    android:background="@drawable/corners_edit_text"
+                    android:drawableStart="@drawable/ic_price"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center_vertical|start"
+                    android:hint="@string/description_price"
+                    android:includeFontPadding="false"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:padding="12dp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textColorHint="#CCCCCC"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/icon_button_apply"
+                android:layout_width="359dp"
+                android:layout_height="61dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="28dp"
+                android:backgroundTint="?attr/colorButtonNormal"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/filter_apply"
+                android:textSize="20sp"
+                app:cornerRadius="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/icon_button_clear"
+                android:layout_width="359dp"
+                android:layout_height="61dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="?attr/colorButtonNormal"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/filter_clear"
+                android:textSize="20sp"
+                app:cornerRadius="8dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

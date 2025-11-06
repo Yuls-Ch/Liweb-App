@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:layout_gravity="center_vertical"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="9dp"
+    app:cardBackgroundColor="?attr/colorSurface">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/card_top_book"
+            android:layout_width="match_parent"
+            android:layout_height="176dp"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/image_book"
+            android:layout_width="92dp"
+            android:layout_height="141dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="17dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/item_book_proof" />
+
+        <ImageView
+            android:id="@+id/circle_number_bg"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/circle_image" />
+
+        <TextView
+            android:id="@+id/number_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/circle_number_bg"
+            android:layout_alignBottom="@id/circle_number_bg"
+            android:layout_alignStart="@id/circle_number_bg"
+            android:layout_alignEnd="@id/circle_number_bg"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_medium"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/title_book"
+            android:layout_width="146dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="12dp"
+            android:layout_toEndOf="@id/image_book"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_medium"
+            android:text="CADÁVER EXQUISITO"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/synopsis_book"
+            android:layout_width="308dp"
+            android:layout_height="56dp"
+            android:layout_below="@id/title_book"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="58dp"
+            android:layout_toEndOf="@id/image_book"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_medium"
+            android:maxLines="4"
+            android:text="Lorem ipsum dolor sit amet consectetur adipiscing elit blandit cras rutrum facilisis pellentesque..."
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/rectag_category"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_below="@id/circle_number_bg"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="89dp"
+            android:background="@drawable/rectangule_category" />
+
+        <TextView
+            android:id="@+id/name_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/rectag_category"
+            android:layout_alignStart="@id/rectag_category"
+            android:layout_alignEnd="@id/rectag_category"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="DISTOPÍA"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

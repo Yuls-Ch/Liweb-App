@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gray_detail">#BABABA</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#2988E2</color>
+    <color name="blue_swamp">#3671A8</color>
+    <color name="blue_medium_dark">#0067AC</color>
+    <color name="dark_blue_swamp">#1A4267</color>
+    <color name="blue_sky">#CFE6FC</color>
+    <color name="blue_light">#CFE6FC</color>
+    <color name="blue_light_dark">#9DBCE0</color>
+    <color name="blue_sky_white">#AFD8FF</color>
+    <color name="blue_blue">#3742A6</color>
+    <color name="grey">#D9D9D9</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray_900">#1E1E1E</color>
+    <color name="red">#E35252</color>
+    <color name="gray_1000">#7F7F7F</color>
+    <color name="gray_2000">#6A6969</color>
+    <color name="gray_3000">#655F5F</color>
+    <color name="dark_blue">#0072A7</color>
+    <color name="dark_gray_bg">#121212</color>
+    <color name="blue_strong">#142088</color>
+    <color name="gray_surface">#1E1E1E</color>
+    <color name="gray_surface_variant">#242424</color>
+    <color name="gray_outline">#2E2E2E</color>
+</resources>
